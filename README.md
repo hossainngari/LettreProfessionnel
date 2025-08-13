@@ -2,8 +2,7 @@
 
 Logiciel pour rédiger facilement des lettres commerciales, administratives et juridiques.
 
-## Captures d’écran
-![Interface principale](LettreProfessionnel/Assets/Images/ProLettre.gif)
+![Démo de l'application](LettreProfessionnel/Assets/Images/ProLettre.gif)
 
 ## Fonctionnalités principales
 - Modèles prêts à l’emploi pour tous types de lettres.
@@ -11,6 +10,11 @@ Logiciel pour rédiger facilement des lettres commerciales, administratives et j
 - Export en PDF ou Word.
 - Interface simple et intuitive adaptée aux entreprises.
 
-## Installation rapide
+## Installation
 ```bash
 git clone https://github.com/hossainngari/LettreProfessionnel.git
+```
+### Comment créer un modèle de Lettre ? 
+
+
+
