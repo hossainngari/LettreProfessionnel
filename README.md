@@ -2,7 +2,7 @@
 
 Logiciel pour rédiger facilement des lettres commerciales, administratives et juridiques.
 
-![Démo de l'application](LettreProfessionnel/Assets/Images/ProLettre.gif)
+![Démo de l'application](LettreProfessionel/Assets/Images/ProLettre.gif)
 
 ## Fonctionnalités principales
 - Modèles prêts à l’emploi pour tous types de lettres.
