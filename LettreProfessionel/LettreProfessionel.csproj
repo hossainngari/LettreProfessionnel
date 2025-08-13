@@ -26,6 +26,7 @@
     <None Remove="Assets\Icons\outlook.png" />
     <None Remove="Assets\Icons\parametre.png" />
     <None Remove="Assets\Icons\pdf.png" />
+    <None Remove="Assets\Images\ProLettre.gif" />
   </ItemGroup>
 
   <ItemGroup>
@@ -86,6 +87,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Icons\pdf.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\ProLettre.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
