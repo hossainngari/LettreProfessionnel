@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Lettre d'embauche officielle</title>
+    <style>
+        /* Import police calligraphique pour signature */
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+        /* Mise en page générale */
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Merriweather', serif;
+            color: #000;
+            line-height: 1.6;
+            background: #fff;
+        }
+
+        body {
+            padding: 40px 60px;
+            box-sizing: border-box;
+            min-height: 297mm; /* hauteur A4 */
+        }
+
+            /* Filigrane */
+            body::before {
+                content: "Karasoft Education";
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg);
+                font-size: 6rem;
+                color: #003366;
+                opacity: 0.05;
+                user-select: none;
+                pointer-events: none;
+                z-index: 0;
+                font-weight: 700;
+                white-space: nowrap;
+            }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            color: #003366;
+            margin-bottom: 40px;
+        }
+
+        .content {
+            max-width: 720px;
+            margin: 0 auto;
+            font-size: 18px;
+            text-align: justify;
+        }
+
+            .content p {
+                margin-bottom: 20px;
+            }
+
+        footer {
+            max-width: 720px;
+            margin: 60px auto 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+            font-size: 16px;
+            color: #003366;
+            position: relative;
+        }
+
+        .contact-info {
+            line-height: 1.4;
+        }
+
+        .signature {
+            font-family: 'Great Vibes', cursive;
+            font-size: 40px;
+            color: #003366;
+            user-select: none;
+        }
+
+        /* Format A4 pour impression */
+        @media print {
+            @page {
+                size: A4;
+                margin: 25mm 20mm 25mm 20mm;
+            }
+
+            body {
+                padding: 0;
+            }
+
+            .content, footer {
+                max-width: 100%;
+            }
+        }
+
+        /* Responsive pour l'écran */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 30px;
+            }
+
+            .content {
+                font-size: 16px;
+            }
+
+            footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .signature {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body contenteditable="true">
+    <h1>Lettre d'embauche officielle</h1>
+
+    <div class="content">
+        <p>
+            Par la présente, <strong>Karasoft Education</strong> a le plaisir d’annoncer officiellement l’embauche de <strong>Hossain Ngari</strong> en tant que membre de notre équipe.
+            Nous sommes convaincus que ses compétences et son engagement seront des atouts majeurs pour notre entreprise.
+        </p>
+        <p>
+            Cette lettre certifie que <strong>Hossain Ngari</strong> est employé sous contrat conformément aux conditions convenues entre les deux parties.
+        </p>
+        <p>
+            Nous lui souhaitons la bienvenue et beaucoup de succès dans ses nouvelles fonctions.
+        </p>
+    </div>
+
+    <footer>
+        <div class="contact-info">
+            <div>Ville : Moanda, Gabon</div>
+            <div>Email : hossainprogrammer@gmail.com</div>
+        </div>
+        <div class="signature">NGARz</div>
+    </footer>
+</body>
+</html>
