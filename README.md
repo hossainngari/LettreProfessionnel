@@ -1,9 +1,18 @@
 # LettreProfessionnel
 
 Logiciel pour rédiger facilement des lettres commerciales, administratives et juridiques.
+------
 
+### Image Apercu du logiciel :
 <div align="center">
-  <img src="LettreProfessionel/Assets/Images/ProLettre.gif" alt="Démo de l'application" />
+  <img src="LettreProfessionel/Assets/Images/LettreProfessionnel-img.jpg" alt="Démo de l'application" />
+</div>
+
+------
+
+### Démonstration complète du Logiciel (ci-dessous) :
+<div align="center">
+  <img src="LettreProfessionel/Assets/Images/demo-lettrePro2.gif" alt="Démo de l'application" />
 </div>
 
 ## Fonctionnalités principales
