@@ -7,8 +7,9 @@
         xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
         mc:Ignorable="d"
         Title="Lettre Professionnelle" 
-        MinHeight="500" 
-        MinWidth="900">
+        WindowStartupLocation="CenterScreen"
+        Height="700" 
+        Width="1280">
 
     <Grid>
 
@@ -18,15 +19,15 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
-        
+
         <!-- Status bar 1 : nom du modèle -->
         <StatusBar Grid.Row="0" 
                    Background="#31628C" 
                    Height="30">
-            
+
             <StatusBarItem HorizontalContentAlignment="Center"
                            VerticalContentAlignment="Center">
-                
+
                 <TextBlock x:Name="StatusText" 
                    Foreground="White"
                    FontWeight="DemiBold"
@@ -42,6 +43,24 @@
             <ToolBar Margin="0 0 0 15"
                      Background="#31628C">
 
+                <!--NewDocument-->
+                <Button ToolTip="Nouveau Document"
+                        Cursor="Hand"
+                        Width="70"
+                        Click="NewDocument_Click"
+                        Background="#EEF5FD"
+                        Margin="0 0 5 0">
+                    
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                        <Image Source="/Assets/Icons/newDocument.png" Width="40"/>
+                        <TextBlock Text="Nouveau" 
+                           FontSize="9"
+                           VerticalAlignment="Center" 
+                           FontFamily="Montserrat"
+                           Margin="5 5 0 0"/>
+                    </StackPanel>
+                </Button>
+
                 <!-- Imprimer -->
                 <Button ToolTip="Imprimer" 
                         Click="Print_Click"
@@ -49,7 +68,7 @@
                         Width="70"
                         Background="#EEF5FD"
                         Margin="0 0 5 0">
-                    
+
                     <StackPanel Orientation="Vertical" VerticalAlignment="Center">
                         <Image Source="pack://application:,,,/Assets/Icons/pdf.png" Width="40"/>
 
@@ -68,10 +87,10 @@
                         Cursor="Hand"
                         Width="70"
                         >
-                    
+
                     <StackPanel Orientation="Vertical" VerticalAlignment="Center">
                         <Image Source="pack://application:,,,/Assets/Icons/outlook.png" Width="40"/>
-                        
+
                         <TextBlock Text="Email"
                            FontSize="9"
                            VerticalAlignment="Center"
@@ -86,10 +105,10 @@
                         Margin="0 0 5 0"
                         Cursor="Hand"
                         Width="70">
-                    
+
                     <StackPanel Orientation="Vertical" VerticalAlignment="Center">
                         <Image Source="pack://application:,,,/Assets/Icons/ms-word.png" Width="40"/>
-                       
+
                         <TextBlock Text="Word"
                            FontSize="9"
                            VerticalAlignment="Center"
@@ -103,10 +122,10 @@
                         Background="#EEF5FD"
                         Cursor="Hand"
                         Width="70">
-                    
+
                     <StackPanel Orientation="Vertical" VerticalAlignment="Center">
                         <Image Source="pack://application:,,,/Assets/Icons/parametre.png" Width="40"/>
-                        
+
                         <TextBlock Text="Paramètre"
                            FontSize="9"
                            VerticalAlignment="Center"
@@ -116,6 +135,14 @@
                 </Button>
             </ToolBar>
         </ToolBarTray>
+
+        <!-- LogoLettrePro -->
+        <Image 
+               VerticalAlignment="Top"
+               Margin="854,7,-1,0"
+              
+               Source="/Assets/Icons/LettrePro.jpg" 
+               Height="100" Grid.RowSpan="2"/>
 
 
         <!-- Contenu principal -->
@@ -127,17 +154,21 @@
             </Grid.ColumnDefinitions>
 
             <!-- Liste des lettres -->
+
             <StackPanel Grid.Column="0" 
-                        Background="#C6C9D2">
-                
+                    Background="#C6C9D2">
+
                 <TextBox Margin="10" 
-                         Height="25" 
-                         Text="Rechercher..." />
-                
-                <ListBox x:Name="LettresList" 
-                         Margin="10" 
-                         SelectionChanged="LettresList_SelectionChanged"/>
+                     Height="25" 
+                     Text="Rechercher..." />
+
+                <ScrollViewer Height="500">
+                    <ListBox x:Name="LettresList" 
+                     Margin="10" 
+                     SelectionChanged="LettresList_SelectionChanged"/>
+                </ScrollViewer>
             </StackPanel>
+
 
             <!-- Séparateur -->
             <GridSplitter Grid.Column="1" 
@@ -150,7 +181,7 @@
             <!-- Contenu de la lettre -->
             <Grid Grid.Column="2" 
                   Background="#E6E6E6">
-                
+
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="*"/>
@@ -207,7 +238,7 @@
                             <Image Source="/Assets/Icons/icon-align-right.png" 
                                    Width="20"/>
                         </Button>
-                        
+
                         <Button ToolTip="Justifier" 
                                  Cursor="Hand"
                                 Click="AlignJustify_Click">
@@ -215,9 +246,9 @@
                             <Image Source="/Assets/Icons/icon-align-justify.png" 
                                    Width="20"/>
                         </Button>
-                        
+
                         <Separator/>
-                        
+
                         <Button ToolTip="Gras" 
                                  Cursor="Hand"
                                 Click="Bold_Click">
@@ -233,7 +264,7 @@
                             <Image Source="/Assets/Icons/icon-italic.png" 
                                    Width="20"/>
                         </Button>
-                        
+
                         <Button ToolTip="Souligné" 
                                  Cursor="Hand"
                                 Click="Underline_Click">
@@ -281,7 +312,7 @@
                         Margin="70 20 70 10"
                         BorderThickness="0.8"
                         BorderBrush="#C6C6C6">
-                    
+
                     <wv2:WebView2 x:Name="HtmlViewer"/>
                 </Border>
             </Grid>
@@ -297,7 +328,7 @@
                    BorderBrush="#C6C6C6"
                    HorizontalContentAlignment="Left"
                    VerticalContentAlignment="Center">
-            
+
             <StatusBarItem>
                 <TextBlock x:Name="LetterInfoText" 
                              Text=""/>
